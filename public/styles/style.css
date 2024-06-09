@@ -721,8 +721,9 @@ justify-content: center;
   padding-top: 20px;
 }
 
-.profile img {
+.about-profile img {
   border-radius: 10px;
+  height: 240px;
 }
 
 .contact-detail {
