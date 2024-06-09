@@ -1,0 +1,170 @@
+@media screen and (max-width: 700px) {
+  body {
+    overflow-x: auto;
+  }
+
+  .main-container {
+    margin: 10px;
+    padding: 2px;
+  }
+
+  .title h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .nav-container {
+    row-gap: 60px;
+    height: 40vh;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .cover-text {
+    font-size: 1.8rem;
+  }
+
+  .search-bar {
+    text-align: center;
+    width: 90%;
+  }
+
+  .input {
+    width: 220px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, auto);
+    gap: 12px;
+  }
+
+  .photo-item .photo {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .photographer {
+    font-size: 1rem;
+  }
+
+  .photo-item .photographer {
+    display: none;
+  }
+
+  .download-icon {
+    cursor: pointer;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+    height: 28px;
+    width: 85px;
+  }
+
+  .download-icon img {
+    height: 16px;
+  }
+
+  .top img {
+    height: 40px;
+  }
+
+  /* lightbox */
+
+  #lightbox {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+  }
+
+  .top-bar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    margin-left: 0;
+    padding: 5px;
+    column-gap: 0.8rem;
+    justify-content: start;
+  }
+
+  .close-btn {
+    top: 0;
+    left: 15.5rem;
+    background-color: #464646;
+    border-radius: 10px;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .close-btn img {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid;
+  }
+
+  .profile {
+    height: 35px;
+    width: 35px;
+  }
+
+  .profile img {
+    height: 30px;
+  }
+
+  .popup-logo {
+    display: none;
+  }
+
+  .popup-image {
+    flex-direction: column;
+    row-gap: 5rem;
+    margin: 0;
+    margin-top: 5px;
+    width: 100%;
+    height: auto;
+  }
+
+  .popup-original {
+    width: 100%;
+  }
+
+  .popup-original img {
+    height: 55vh;
+    width: 100%;
+  }
+
+  .bottom-bar {
+        text-align: left;
+        width: 100%;
+        margin-left: 1rem;
+        position: relative;
+        bottom: 23rem;
+        padding: 10px;
+    } 
+
+  .bottom-bar > span:nth-child(1) {
+    display: none;
+  }
+
+  .options {
+    gap: 10px;
+    padding: 10px;
+  }
+}

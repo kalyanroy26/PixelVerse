@@ -1,0 +1,121 @@
+<%- include('partials/header.ejs') %>
+    <div class="main-container">
+        <div class="title">
+            <h1>Free Stock Photos</h1>
+        </div>
+
+
+
+        <div id="gallery" class="gallery">
+            <% data.photos.forEach(photo=> { %>
+                <li class="photo-item">
+                    <img loading="lazy" class="photo" src="<%= photo.src.portrait %>" alt="<%= photo.alt %>"
+                        data-original="<%= photo.src.original %>" data-landscape="<%= photo.src.landscape %>"
+                        data-large="<%= photo.src.large %>" data-caption="<%= photo.alt %>"
+                        data-photographer="<%= photo.photographer %>" data-id="<%= photo.id %>"
+                        data-photographer_url="<%= photo.photographer_url%>">
+                    <span class="photographer">
+                        <a href="<%= photo.photographer_url%>">
+                            <%= photo.photographer %>
+                        </a>
+                    </span>
+                
+
+                    <a href="/download/<%= photo.id %>" class="download-icon">
+                        <img src="/images/download.png" alt="download" height="20">
+                        <span>Download</span>
+                    </a>
+                </li>
+                <% }) %>
+        </div>
+
+        <div id="scroll-to-top" class="top"><img src="/images/top.png" alt="back to top" height="60"></div>
+
+
+        <div id="lightbox-bg" class="hidden">
+            <div id="lightbox" class="popup hidden">
+                <div class="top-bar">
+                    <div class="profile">
+                        <img src="/images/photographer.png" alt="photographer" height="40">
+                    </div>
+                    <span>
+                        <a href="#" id="photographer-name">Mike Kolsen</a>
+                    </span>
+
+                    <div class="popup-logo">
+                        <img src="/images/logo-unscreen.gif" alt="PixelVerse" height="50">
+                        <a href="/"> <span class="popup-logo-txt"> PixelVerse</span></a>
+                    </div>
+
+                    <div id="close" class="close-btn"><img src="/images/close.png" alt="close image" height="50"></div>
+
+                </div>
+
+                <div class="popup-image">
+                    <div class="popup-original">
+                        <img src="/images/mountain.jpg" alt="mountain">
+                    </div>
+
+                    <div class="download">
+                        <span class="download-option">select size :</span>
+                        <div class="options">
+                            <div class="option">
+                                <h4>Original</h4> <a class="dw-btn" data-size="original"><img src="/images/download.png"
+                                        alt="download" height="20"></a>
+                            </div>
+                            <div class="option">
+                                <h4>Portrait</h4> <a class="dw-btn" data-size="portrait"><img src="/images/download.png"
+                                        alt="download" height="20"></a>
+                            </div>
+                            <div class="option">
+                                <h4>Landscape</h4> <a class="dw-btn" data-size="landscape"><img
+                                        src="/images/download.png" alt="download" height="20"></a>
+                            </div>
+                            <div class="option">
+                                <h4>Large</h4> <a class="dw-btn" data-size="large"><img src="/images/download.png"
+                                        alt="download" height="20"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-bar">
+                    <span class="free-use"><img src="/images/free.png" alt="free" height="30px"> Free to use</span>
+                    <span id="caption">
+                        <img src="/images/cc.png" alt="captions" height="30px">
+                        <span class="caption-text">Famous mountain in japan</span>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="loading">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+
+        <div class="loader triangle">
+            <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+        </div>
+
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <rect x="8" y="8" width="64" height="64"></rect>
+            </svg>
+        </div>
+    </div>
+    <div id="loader"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+    </body>
+
+    </html>

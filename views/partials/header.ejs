@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelVerse</title>
+  <link rel="icon" href="/images/logo-unscreen.gif">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/media-queries.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-container cover-container">
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="/images/logo-unscreen.gif" alt="PixelVerse" height="50">
+          <a href="/"> <span class="logo-txt"> PixelVerse</span></a>
+        </div>
+
+        <div class="nav-menu">
+          <span class="nav-item"><a href="/">Home</a></span>
+          <span class="nav-item"><a href="/contact">Contact</a></span>
+          <span class="nav-item"><a href="/about">About</a></span>
+          <div class="nav-item pexel"><a href="#">
+            <p class="created-using">Created using</p>
+            <h3 class="pexel-api">Pexels API</h3>
+          </a></div>
+
+
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <span class="cover-text"> Your Source for Stunning Stock Images</span>
+        <form action="/search" method="post">
+          <div class="InputContainer">
+            <input type="search" name="query" class="input" id="input" placeholder="search for a image">
+            <button for="input" class="labelforsearch" type="submit">
+              <svg viewBox="0 0 512 512" class="searchIcon">
+                <path
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                </path>
+              </svg>
+            </button>
+        </form>
+      </div>
+    </div>
+  </div>
